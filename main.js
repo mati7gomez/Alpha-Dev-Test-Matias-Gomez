@@ -1,73 +1,5 @@
-//const timerElement = document.getElementById('timer');
-///
-window.addEventListener("resize", () => {
-	console.log(document.body.style.width);
-  document.body.style.width = window.innerWidth + "px";
-});
-/*
-// Example: countdown from 5 minutes
-let timeLeft = 30 * 60; // seconds
-
-function updateTimer() {
-	if (timeLeft < 0)
-	{
-		timerElement.textContent = `00:00`;
-		clearInterval(updateTimer);
-	}
-	else
-	{
-		let minutes = Math.floor(timeLeft / 60);
-		let seconds = timeLeft % 60;
-
-		// Add leading zeros if needed
-		minutes = minutes < 10 ? '0' + minutes : minutes;
-		seconds = seconds < 10 ? '0' + seconds : seconds;
-
-		timerElement.textContent = `${minutes}:${seconds}`;
-
-		if (timeLeft > 0) {
-			timeLeft--;
-		}
-	}
-    
-}
-
-// Run every 1 second
-setInterval(updateTimer, 1000);
-updateTimer(); // Run once immediately
-
-//-----------
-
-const slider = document.querySelector('.burgers-scroll');
-
-let isDown = false;
-let startX;
-let scrollLeft;
-
-slider.addEventListener('mousedown', (e) => {
-    isDown = true;
-    slider.classList.add('active'); // optional for cursor style
-    startX = e.pageX - slider.offsetLeft;
-    scrollLeft = slider.scrollLeft;
-});
 
 
-
-
-slider.addEventListener('mousemove', (e) => {
-    if (!isDown) return;
-    e.preventDefault();
-    const x = e.pageX - slider.offsetLeft;
-    const walk = (x - startX) * 2; // scroll speed multiplier
-    slider.scrollLeft = scrollLeft - walk;
-});
-
-window.addEventListener('mouseup', () => {
-    isDown = false;
-	console.log('up');
-    slider.classList.remove('active');
-});
-*/
 
 const burgers = [
   {
@@ -86,8 +18,8 @@ const burgers = [
     image: "images/burger1.jpg"
   },
   {
-    name: "Vegan Burger",
-    description: "Plant-based patty with avocado, lettuce and tomato.",
+    name: "Classic Burger",
+    description: "Our classic burger, tomato, lettuce, beacon and onions.",
     image: "images/burger1.jpg"
   }
 ];
@@ -134,7 +66,7 @@ burgers.forEach(burger => {
 
 ///-------------
 
-const duration = 1 * 5 * 1 * 1 * 1000;
+const duration = 2 * 24 * 60 * 60 * 1000;
 const offerDeadline = new Date().getTime() + duration;
 
 // Update countdown every second
