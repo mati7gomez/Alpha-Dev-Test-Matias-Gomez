@@ -613,6 +613,17 @@ footer .bottom .terms p{
     .second-section .timer-container{
         text-align: center;
     }
+    footer .top .left-container p{
+        font-size: 10px;
+    }
+
+    footer .top .right-container h1{
+    font-size: 20px;
+    }
+
+    footer .bottom p{
+        font-size: 10px;
+    }
 }
 
 @media (max-width: 580px){
