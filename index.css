@@ -27,7 +27,7 @@ a:hover{
     display: flex;
     width: 30%;
     right: 0;
-    height: 100VW;
+    height: 100%;
     position: fixed;
     background-color: white;
     z-index: 20;
