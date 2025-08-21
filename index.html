@@ -1,198 +1,366 @@
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE-edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Document</title>
-		<link rel="stylesheet" href="style.css">
-	</head>
-	<body>
-		<header class="header">
-			<div class="wrapper">
-					<nav class="header-nav">
-						<div class="nav-logo">
-							<img src="images/logo2.png" alt="" draggable="false">
-						</div>
-						<ul class="header-navigation">
-							<li class="header-item">
-								<a href="#">Home</a>
-							</li>
-							<li class="header-item">
-								<a href="#">The Menu</a>
-							</li>
-							<li class="header-item">
-								<a href="#">About</a>
-							</li>
-						</ul>
-						<button class="btn-dark">Order now!</button>
-						<!-- Hamburger icon -->
-      					<button class="hamburger" aria-label="Open menu">
-        					<span></span>
-       						<span></span>
-        					<span></span>
-     					 </button>
-					</nav>
-				</div>
-		</header>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Página Web</title>
+  <!--css-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <div class="wrapper">
+            <nav class="header-nav">
+                <ul>
+                    <img src="images/logo.png" alt="" draggable="false">
+                    <li><a>About Us</a></li>
+                    <li><a>Book Online</a></li>
+                    <li><a>Weight Loss Programs</a></li>
+                    <li><a>Real Patient Stories</a></li>
+                    <li><a>Locations</a></li>
+                    <li><a>Blog</a></li>
+                    <li><a>Shop</a></li>
+                    <li><a>Subscription</a></li>
+                    <button class="nav-burger"><img src="images/nav-burger.png" alt="" draggable="false" id="btn-nav" style="display: none;"></button>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
+    <div class="nav-menu-mobile" style="display: none;">
+        <button id="btn-close-nav">X</button>
+        <ul>
+            <li><a>About Us</a></li>
+            <li><a>Book Online</a></li>
+            <li><a>Weight Loss Programs</a></li>
+            <li><a>Real Patient Stories</a></li>
+            <li><a>Locations</a></li>
+            <li><a>Blog</a></li>
+            <li><a>Shop</a></li>
+            <li><a>Subscription</a></li>
+        </ul>
+    </div>
 
-		
-		<section class="hero-section">
-			<div class="wrapper">
-				<div class="main-container">
-					<div class="left-container">
-						<h1>FAUSTO BURGERS</h1>
-						<p>Welcome to the burger PARADISE, where every bite is journey into flavour perfection.</p>
-						<button class="btn-light">ORDER NOW!</button>
-					</div>
-					<div class="right-container">
-						<img src="images/burger-hero.png" alt="" draggable="false">
-						<div class="hero-circle"></div>
-					</div>
-				</div>
-			</div>
-		</section>
-		
-		<div class="separator-1"></div>
+    <section class="hero-section">
+        <div class="hero-right-background"></div>
+        <div class="wrapper">
+            <div class="left-container">
+                <h1>Chicago’s <span style="color: #DD71C6;">Free</span> Medical Check-Up and Weight Loss Consultation</h1>
+                <p class="desktop-desc">Limited spots available due to the Physicians schedule and the high demand for service. No credit card or insurance required.</p>
+                <button class="btn-pink">Book my appointment</button>
+            </div>
+            <p class="spots" style="display: none;">Only <span style="color: #DD71C6;">11</span> spots available!</p>
+            <div class="right-container">
+                <div class="timer-first">
+                    <p>Your offer ends in:</p>
+                    <div class="timer-second">
+                            <div class="time-container">
+                                <p class="time-text"><span style="color: #0083D3;">DAYS</span></p>
+                                <p class="time-number" id="days">00</p>
+                            </div>
+                            <div class="time-container">
+                                <p class="time-text"><span style="color: #0083D3;">HOURS</span></p>
+                                <p class="time-number" id="hours">00</p>
+                            </div>
+                            <div class="time-container">
+                                <p class="time-text"><span style="color: #0083D3;">MINUTES</span></p>
+                                <p class="time-number" id="minutes">00</p>
+                            </div>
+                            <div class="time-container">
+                                <p class="time-text"><span style="color: #0083D3;">SECONDS</span></p>
+                                <p class="time-number" id="seconds">00</p>
+                            </div>
+                        </div>
+                </div>
+            </div> 
+            <p class="mobile-desc" style="display: none;">There are limited spots due to the Physicians schedule and the high demand for service. No credit card or insurance required.</p>
+            <div class="btn-mobile" style="display: none;"><button class="btn-pink">Book my appointment</button></div>
+        </div>
+    </section>
 
-		<section class="second-section">
-			<div class="background">
-				<div class="wrapper">
-					<div class="timer-container">
-						<h1>Hurry up!</h1>
-						<p>Sale ends in:</p>
-						<div class="timers">
-							<div class="individual-timer" id="days">00</div>
-							<div class="individual-timer" id="hours">00</div>
-							<div class="individual-timer" id="minutes">00</div>
-							<div class="individual-timer" id="seconds">00</div>	
-						</div>
-					</div>
-					<div class="main-container">
-						<div class="left-container">
-							<img src="images/flash-sale.png" alt="" draggable="false">
-							<h1 class="disccount">30% OFF!</h1>
-							<p>Valid for all products. Max of 4.</p>
-							<button class="btn-offer" id="btn-offer-1">Order now!</button>
-						</div>
-						<div class="right-container">
-							<img src="images/2x1.png" alt="" draggable="false">
-							<img src="images/hero-image.png" alt="" draggable="false" class="burger">
-							<button class="btn-offer" id="btn-offer-2">Order now!</button>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
+    <section class="second-section">
+        <div class="wrapper">
+            <div class="get-to-know">
+                <div class="stats-container">
+                    <img src="images/briefcase.png" alt="" draggable="false">
+                    <h2>10 +</h2>
+                    <p>years in business</p>
+                </div>
+                <div class="stats-container">
+                    <img src="images/smile.png" alt="" draggable="false">
+                    <h2>2000 +</h2>
+                    <p>positive reviews</p>
+                </div>
+                <div class="stats-container">
+                    <img src="images/message-circle.png" alt="" draggable="false">
+                    <h2>15.000 +</h2>
+                    <p>satisfied clients</p>
+                </div>
+                <div class="stats-container">
+                    <img src="images/activity.png" alt="" draggable="false">
+                    <h2>Many +</h2>
+                    <p>nurses and physician assistants on staff</p>
+                </div>
+            </div>
+            <button class="btn-yellow">Book my appointment</button>
+        </div>
+    </section>
 
+    <section class="third-section">
+        <div class="wrapper">
+            <div class="left-container">
+                <h2>Who Is The Consultation For?</h2>
+                <p>Chicago’s free medical check-up and weight loss consultation is for Chicago residents who are looking to lose weight so they can live a long, vibrant and healthy life, while looking good and not breaking the bank.</p>
+                <h2>How Does It Work?</h2>
+                <p>In this exam a certified nurse or physician will do various tests to check your overall health level and find which easy-to-do physician-supervised weight loss program will work best for you.</p>
+                <button class="btn-pink">Book my appointment</button>
+            </div>
+            <img src="images/woman.png" alt="" draggable="false">
+        </div>
+    </section>
 
-		<section class="third-section">
-			<div class="separator-2"></div>
-			<div class="wrapper">
-				<div class="main-container" id="burger-list">
-				<!--<div class="individual-container">
-						<div class="item-image"></div>
-						<h1>Burger name</h1>
-						<p>Burger sfsdfds fdd esfsff sdfdsfsdf  sfsdfdescription</p>
-						<div>
-							<button class="left"><</button>
-							<input type="text">
-							<button class="right">></button>
-						</div>
-					</div>-->
-				</div>
-				<button class="btn-light">ORDER NOW!</button>
-			</div>
-			<div class="separator-3"></div>
-		</section>
+    <section class="fourth-section">
+        <div class="wrapper">
+            <h2>We Can Help You</h2>
+            <div class="mobile" style="display: none;">
+                <p>For those of us who struggle with our weight
+                    it’s easy to lose hope. We have seen so many tricks, gimmicks and weight loss programs that simply do not work for us.
+                        They want us to eat like a pigeon, avoid all the things we love to eat and work out till we cry. </p>
+                <p>We are here to tell you that it doesn’t have to be that way. There is hope! Technology has advanced rapidly in recent years and now, with proper guidance...</p>
+                <img src="images/people2.png" alt="" draggable="false" style="display: none;">
+                <p>You can join the ranks of our over 15,000 satisfied clients who have lost weight, regained their confidence and are living happy exuberant lives with their family. They did this without: breaking the bank, sweating buckets in intense workout programs, and most importantly, without giving up ice-cream, bread, pizza, doughnuts and all their favorite foods.</p>
+                <button class="btn-pink">See patient stories</button>
+            </div>
+            
+            <p>For those of us who struggle with our weight
+it’s easy to lose hope. We have seen so many tricks, gimmicks and weight loss programs that simply do not work for us.
+They want us to eat like a pigeon, avoid all the things we love to eat and work out till we cry. We are here to tell you that it doesn’t have to be that way. There is hope! Technology has advanced rapidly in recent years and now, with proper guidance... </p>
+            <p>You can join the ranks of our over 15,000 satisfied clients who have lost weight, regained their confidence and are living happy exuberant lives with their family. They did this without: breaking the bank, sweating buckets in intense workout programs, and most importantly, without giving up ice-cream, bread, pizza, doughnuts and all their favorite foods.</p>
+            <button class="btn-pink">Book my appointment</button>
+            <img src="images/people.png" alt="" draggable="false">
+        </div>
+    </section>
 
-		
+    <section class="fifth-section">
+        <div class="wrapper">
+            <h2>What You’ll Get At Your <span style="color: #DD71C6;">Free</span> Consultation</h2>
+            <div class="mid-container">
+                <div class="individual-container">
+                    <h3>Body Mass Index</h3>
+                    <hr color="#0083D3" width="100%"/>
+                    <ul>
+                        <li>Complete understanding of your body composition</li>
+                        <li>A clear view of your weight loss goals</li>
+                        <li>Clear data to help you make an informed decision about your health</li>
+                    </ul>
+                </div>
+                <div class="individual-container">
+                    <h3><span style="color: #DD71C6;">Vital Signs Check</span></h3>
+                    <hr color="#DD71C6" width="100%"/>
+                    <ul class>
+                        <li>Body temperature</li>
+                        <li>Pulse rate, heart's rate, rhythm and regularity</li>
+                        <li>Breathing rate</li>
+                        <li>Blood pressure</li>
+                    </ul>
+                </div>
+            </div>
+            <button class="btn-pink">Book my appointment</button>
+        </div>
+    </section>
 
-		<section class="fourth-section">
-			<div class="wrapper">
-				<div class="faq">
-					<div class="question">
-   						<h2>Where are we located?</h2>
-   						<img src="images/arrow-down.png" alt="" width="20px" height="20px">
-  					</div>
-				 	 <div class="answer">
-   						 <p>We are located at Obispo Salguero 77.</p>
-					  </div>
-				</div>
-
-				<div class="faq">
-					<div class="question">
-						<h2>What are your opening hours?</h2>
-						<img src="images/arrow-down.png" alt="" width="20px" height="20px">
-					</div>
-					<div class="answer">
-						<p>We are open from Monday to Sunday, 11:00 AM to 11:00 PM.</p>
-					</div>
-				</div>
-
-				<div class="faq">
-					<div class="question">
-						<h2>Do you offer vegetarian or vegan options?</h2>
-						<img src="images/arrow-down.png" alt="" width="20px" height="20px">
-					</div>
-					<div class="answer">
-						<p>Yes! We have both vegetarian and vegan burgers made with fresh ingredients.</p>
-					</div>
-				</div>
-
-				<div class="faq">
-					<div class="question">
-						<h2>Can I order online for delivery?</h2>
-						<img src="images/arrow-down.png" alt="" width="20px" height="20px">
-					</div>
-					<div class="answer">
-						<p>Absolutely. You can place your order through our website or partner delivery apps.</p>
-					</div>
-				</div>
-
-				<div class="faq">
-					<div class="question">
-						<h2>Do you have gluten-free options?</h2>
-						<img src="images/arrow-down.png" alt="" width="20px" height="20px">
-					</div>
-					<div class="answer">
-						<p>Yes, we offer gluten-free buns and sides upon request.</p>
-					</div>
-				</div>
-			</div>
-		</section>
-
-
-		<footer>
-			<div class="wrapper">
-				<div class="first">
-					<img src="images/logo2.png" alt="" draggable="false" width="100px" height="100px">
-					<p>3512 N Oakland Ave
-						Shorewood, WI 53211</p>
-				</div>
-				<ul class="footer-nav">
-					<li class="header-item">
-						<a href="#">Home</a>
-					</li>
-					<li class="header-item">
-						<a href="#">The Menu</a>
-					</li>
-					<li class="header-item">
-						<a href="#">About</a>
-					</li>
-				</ul>
-				<div class="bottom">
-					<div class="terms">
-						<p>Terms Of Use</p>
-						<p>Privacy Policy</p>
-					</div>
-					<p>Copyright © 2022 Fausto Burgers. All Rights Reserved</p>
+    <section class="sixth-section">
+        <div class="wrapper">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq">
+				<div class="question">
+   					<p>Why is it free?</p>
+   					<img src="images/arrow-down.png" alt="" width="26px" height="16px">
+  				</div>
+				<div class="answer">
+   					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum..</p>
 				</div>
 			</div>
-		</footer>
+            <div class="faq">
+				<div class="question">
+   					<p>Do I need this if I’ve had my yearly medical check? What is the difference?</p>
+   					<img src="images/arrow-down.png" alt="" width="26px" height="16px">
+  				</div>
+				<div class="answer">
+   					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum..</p>
+				</div>
+			</div>
+            <div class="faq">
+				<div class="question">
+   					<p>Can I bring another person to the appointment?</p>
+   					<img src="images/arrow-down.png" alt="" width="26px" height="16px">
+  				</div>
+				<div class="answer">
+   					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum..</p>
+				</div>
+			</div>
+            <div class="faq">
+				<div class="question">
+   					<p>How long does it take?</p>
+   					<img src="images/arrow-down.png" alt="" width="26px" height="16px">
+  				</div>
+				<div class="answer">
+   					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum..</p>
+				</div>
+			</div>
+            <div class="faq">
+				<div class="question">
+   					<p>What if I have to cancel or if I’m not sure I’ll be able to make it?</p>
+   					<img src="images/arrow-down.png" alt="" width="26px" height="16px">
+  				</div>
+				<div class="answer">
+   					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum..</p>
+				</div>
+			</div>
+            <div class="faq">
+				<div class="question">
+   					<p>Do I need to bring anything with me?</p>
+   					<img src="images/arrow-down.png" alt="" width="26px" height="16px">
+  				</div>
+				<div class="answer">
+   					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum..</p>
+				</div>
+			</div>
+            <div class="faq">
+				<div class="question">
+   					<p>What if I don’t have insurance?</p>
+   					<img src="images/arrow-down.png" alt="" width="26px" height="16px">
+  				</div>
+				<div class="answer">
+   					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum..</p>
+				</div>
+			</div>
+            <div class="faq">
+				<div class="question">
+   					<p>Do the weight loss programs you offer work?</p>
+   					<img src="images/arrow-down.png" alt="" width="26px" height="16px">
+  				</div>
+				<div class="answer">
+   					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum..</p>
+				</div>
+			</div>
+            <div class="faq">
+				<div class="question">
+   					<p>What's the catch?</p>
+   					<img src="images/arrow-down.png" alt="" width="26px" height="16px">
+  				</div>
+				<div class="answer">
+   					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum..</p>
+				</div>
+			</div>
+            <div class="faq">
+				<div class="question">
+   					<p>Will I have to exhaust myself in the gym to make it work?</p>
+   					<img src="images/arrow-down.png" alt="" width="26px" height="16px">
+  				</div>
+				<div class="answer">
+   					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum..</p>
+				</div>
+			</div>
+            <div class="faq">
+				<div class="question">
+   					<p>Where are you located?</p>
+   					<img src="images/arrow-down.png" alt="" width="26px" height="16px">
+  				</div>
+				<div class="answer">
+   					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum..</p>
+				</div>
+			</div>
+            <button class="btn-pink">Book my appointment</button>
+        </div>
+    </section>
 
+    <footer>
+        <div class="wrapper">
+            <div class="top-container">
+                <div class="left-container">
+                    <img src="images/logo.png" alt="" draggable="false" width="138" height="63">
+                    <p>A Better Weigh Medical Weight Loss Center offers a weight loss program dedicated to helping you achieve long term weight loss success with the use of FDA approved medication.</p>
+                    <div>
+                        <img src="images/location.png" alt="" draggable="false">
+                        <p>Head Office: 1931 W 95th Streeet Chicago IL, 60643</p>
+                    </div>
+                    <div>
+                        <img src="images/phone.png" alt="" draggable="false">
+                        <p>Phone: 773-496-4222</p>
+                    </div>
+                </div>
+                <div class="right-container">
+                    <div class="about">
+                        <h3>About</h3>
+                        <ul>
+                            <li><a href="">About Us</a></li>
+                            <li><a href="">Book Online</a></li>
+                            <li><a href="">Locations</a></li>
+                            <li><a href="">Real Patient Stories</a></li>
+                            <li><a href="">Weight Loss Programs</a></li>
+                        </ul>
+                    </div>
+                    <div class="more-links">
+                        <h3>More Links</h3>
+                        <ul>
+                            <li><a href="">Franchise Opportunities</a></li>
+                            <li><a href="">Career Opportunities</a></li>
+                            <li><a href="">Privacy Policy</a></li>
+                            <li><a href="">Terms & Conditions</a></li>
+                            <li><a href="">Return Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-container">
+                <div class="socials">
+                    <a><img src="images/instagram.png" alt="" draggable="false"></a>
+                    <a><img src="images/twitter.png" alt="" draggable="false"></a>
+                    <a><img src="images/facebook.png" alt="" draggable="false"></a>
+                </div>
+                <p>Copyright by A Better Weigh Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 
-		<script src="main.js"></script>
-	</body>
+  <!--javaScript-->
+  <script src="index.js"></script>
+</body>
 </html>
